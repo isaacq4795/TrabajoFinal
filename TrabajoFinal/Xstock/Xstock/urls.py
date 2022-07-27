@@ -24,5 +24,5 @@ urlpatterns = [
     
     # url XstockApp
 
-    path('Xstock/',include('XstockApp.url')),
+    path('XstockApp/',include('XstockApp.url')),
 ]

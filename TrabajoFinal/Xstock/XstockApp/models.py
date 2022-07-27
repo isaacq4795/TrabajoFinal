@@ -17,6 +17,7 @@ class Usuario_registrofrom(UserCreationForm):
         help_texts = {k:"" for k in  fields}
 
 class Usuario(models.Model):
+    
     nombre_usuario = forms.CharField(max_length=20)
     correo = forms.EmailField(label="Email")
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)

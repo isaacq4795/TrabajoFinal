@@ -60,7 +60,7 @@ ROOT_URLCONF = 'Xstock.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:\Users\kenny\Desktop\TrabajoFinal\Xstock\XstockApp\Template\Xstock"],
+        'DIRS': [r"C:\Users\kenny\Desktop\TrabajoFinal\Xstock\XstockApp\Template\XstockApp"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,3 +131,5 @@ STATICFILE_DIRS =(
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'XstockApp/login'

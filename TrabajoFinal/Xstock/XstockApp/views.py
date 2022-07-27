@@ -13,11 +13,7 @@ from XstockApp.models import *
 
 def inicio(request):
 
-    inicia = loader.get_template('')
-
-    pag_inicial = inicia.render()
-
-    return HttpResponse(pag_inicial)
+    return render(request, 'index.html')
 
 
 def logear(request):
@@ -34,19 +30,19 @@ def logear(request):
             if user is not None:
                 login(request,user)
 
-                return render(request,"XstockApp/index.html")
+                return render(request,"index.html")
 
             else:
 
-                return render(request,"XstockApp/index.html")
+                return render(request,"index.html")
         else:
 
-            return render(request,"XstockApp/index.html")
+            return render(request,"index.html")
     
     form = AuthenticationForm()
 
 
-    return render(request,"XstockApp/Login.html",{'form': form})
+    return render(request,"Login.html",{'form': form})
 
 def Reguistar(request):
     if request.method == "post":
@@ -57,13 +53,13 @@ def Reguistar(request):
 
             username = form.cleaned_data['username']
             form.save
-            return render(request,"XstockApp/index.html")
+            return render(request,"index.html")
     
     
     else:
 
         form = Usuario_registrofrom
-    return render(request,"XstockApp/index.html",{"form":form})
+    return render(request,"index.html",{"form":form})
 
 
     

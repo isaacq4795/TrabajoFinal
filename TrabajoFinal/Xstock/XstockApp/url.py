@@ -1,8 +1,9 @@
+from django import views
 from django.urls import path
-from .views import *
+from XstockApp.views import inicio,logear,Reguistar,Perfil,Informacion
 
 urlpatterns = [
-    path('',inicio,),
+    path('',inicio),
     path('Login/',logear),
     path('Register',Reguistar),
     path('Profile',Perfil),
