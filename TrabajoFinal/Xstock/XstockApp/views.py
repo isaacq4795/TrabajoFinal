@@ -44,8 +44,10 @@ def logear(request):
 
     return render(request,"Login.html",{'form': form})
 
+
+
 def Reguistar(request):
-    if request.method == "post":
+    if request.method == "POST":
 
         form = UserCreationForm(request.POST)
 
@@ -68,10 +70,14 @@ def Perfil(request):
     
     return HttpResponse("Perfil")
 
+
+
 def Informacion(request):
     
-    return HttpResponse("Info sobre mi")
+    return render(request,"About.html")
+
+
 
 def home(request):
 
-    return HttpResponse("inicio pagina")
+    return render(request,"index.html")
